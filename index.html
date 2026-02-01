@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Aya Abu Alkass | Portfolio CV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --purple:#7c3aed;
+  --purple-soft:#a78bfa;
+  --purple-dark:#4c1d95;
+  --white:#ffffff;
+  --gray:#6b7280;
+  --bg:#f9fafb;
+  --shadow:rgba(124,58,237,0.15);
+}
+
+*{box-sizing:border-box}
+
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--bg);
+  margin:0;
+  color:#111;
+}
+
+.lang-switch{
+  text-align:center;
+  margin:20px;
+}
+.lang-switch button{
+  margin:5px;
+  padding:8px 18px;
+  border:none;
+  border-radius:20px;
+  background:var(--purple);
+  color:#fff;
+  cursor:pointer;
+}
+
+.container{
+  max-width:1000px;
+  margin:30px auto;
+  background:var(--white);
+  padding:50px;
+  border-radius:18px;
+  box-shadow:0 20px 40px var(--shadow);
+}
+
+header{text-align:center}
+header h1{font-size:38px;color:var(--purple-dark)}
+header h2{color:var(--gray)}
+.email{color:var(--purple);font-weight:600}
+
+section{margin-top:40px}
+section h3{
+  color:var(--purple-dark);
+  border-right:4px solid var(--purple);
+  padding-right:12px;
+}
+
+.skills span{
+  display:inline-block;
+  background:#f3f0ff;
+  padding:7px 16px;
+  margin:6px;
+  border-radius:20px;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.project-card{
+  border-radius:16px;
+  box-shadow:0 10px 25px var(--shadow);
+  overflow:hidden;
+}
+
+.project-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.project-card .content{
+  padding:15px;
+}
+
+.logo{
+  width:160px;
+  max-width:80%;
+  margin-bottom:20px;
+}
+
+/* ===== المهارات الإضافية ===== */
+
+.extra-skills{
+  margin-top:50px;
+}
+
+.extra-skills h4{
+  color:var(--purple-dark);
+  margin-bottom:15px;
+  font-size:22px;
+}
+
+.skills-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.skills-list span{
+  background:#ede9fe;
+  border:1px solid var(--purple-soft);
+  padding:10px 18px;
+  border-radius:25px;
+  font-size:14px;
+  color:#4c1d95;
+  transition:0.3s;
+}
+
+.skills-list span:hover{
+  background:var(--purple);
+  color:#fff;
+}
+
+/* ===== السوشيال ===== */
+
+.social{
+  text-align:center;
+  margin-top:50px;
+}
+.social a{
+  display:inline-block;
+  margin:10px;
+  padding:14px 26px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+.instagram{background:#a855f7}
+.whatsapp{background:#22c55e}
+</style>
+</head>
+
+<body>
+
+<div class="lang-switch">
+  <button onclick="setLang('ar')">العربية</button>
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('tr')">Türkçe</button>
+</div>
+
+<div class="container">
+
+<header>
+  <img src="55بقغ.jpg" alt="A Website Design Logo" class="logo">
+  <h1 id="name"></h1>
+  <h2 id="title"></h2>
+  <p id="location"></p>
+  <p class="email">ayaalkass8@gmail.com</p>
+</header>
+
+<section>
+  <h3 id="aboutTitle"></h3>
+  <p id="aboutText"></p>
+</section>
+
+<section>
+  <h3 id="projectsTitle"></h3>
+  <div class="projects" id="projects"></div>
+</section>
+
+<section>
+  <h3 id="skillsTitle"></h3>
+  <div class="skills" id="skills"></div>
+</section>
+
+<section>
+  <h3 id="langsTitle"></h3>
+  <ul id="langs"></ul>
+</section>
+
+<!-- المهارات الشخصية -->
+<section class="extra-skills">
+  <h4>المهارات الشخصية</h4>
+  <div class="skills-list">
+    <span>الإبداع</span>
+    <span>حل المشكلات</span>
+    <span>التفكير التحليلي</span>
+    <span>إدارة الوقت</span>
+  </div>
+</section>
+
+<!-- مهارات التصميم -->
+<section class="extra-skills">
+  <h4>مهارات التصميم</h4>
+  <div class="skills-list">
+    <span>تصميم بوستات سوشيال ميديا بأسلوب عصري</span>
+    <span>تنسيق المحتوى البصري</span>
+    <span>اختيار الألوان والخطوط</span>
+    <span>فهم الهوية البصرية للعلامات التجارية</span>
+  </div>
+</section>
+
+<div class="social">
+  <a class="instagram" href="https://www.instagram.com/a.website_design" target="_blank">Instagram</a>
+  <a class="whatsapp" href="https://wa.me/message/QYNKJ3J25NFHO1" target="_blank">WhatsApp</a>
+</div>
+
+</div>
+
+<script>
+const data={
+ar:{
+name:"آية أبو الكاس",
+title:"طالبة هندسة برمجيات – سنة ثالثة",
+location:"إسطنبول – تركيا",
+aboutTitle:"نبذة شخصية",
+aboutText:"طالبة هندسة برمجيات شغوفة بتطوير الويب والتصميم الرقمي والبرمجة، لدي خبرة عملية من خلال تنفيذ عدة مشاريع برمجية وتصميمية، مع اهتمام خاص بالمواقع متعددة اللغات.",
+projectsTitle:"المشاريع",
+projects:[
+{title:"موقع لقمة هنية – متجر حلويات",imgs:["Screenshot 2026-01-15 172627.png"]},
+{title:"موقع Beauty Clinic",imgs:["Screenshot 2026-01-15 173624.png"]}
+],
+skillsTitle:"المهارات التقنية",
+skills:["HTML","CSS","Java","React.js","تصميم واجهات","مواقع متعددة اللغات"],
+langsTitle:"اللغات",
+langs:["العربية: ممتاز","الإنجليزية: جيد جدًا","التركية: جيد"]
+},
+
+en:{
+name:"Aya Abu Alkass",
+title:"Software Engineering Student – 3rd Year",
+location:"Istanbul – Turkey",
+aboutTitle:"Profile",
+aboutText:"Software engineering student passionate about web development and digital design.",
+projectsTitle:"Projects",
+projects:[
+{title:"Lokma Haniya Website",imgs:["Screenshot 2026-01-15 172627.png"]},
+{title:"Beauty Clinic ",imgs:["Screenshot 2026-01-15 173624.png"]}
+],
+skillsTitle:"Technical Skills",
+skills:["HTML","CSS","Java","React.js","UI Design"],
+langsTitle:"Languages",
+langs:["Arabic","English","Turkish"]
+},
+
+tr:{
+name:"Aya Abu Alkass",
+title:"Yazılım Mühendisliği Öğrencisi",
+location:"İstanbul",
+aboutTitle:"Profil",
+aboutText:"Web geliştirme ve tasarıma ilgi duyan yazılım öğrencisi.",
+projectsTitle:"Projeler",
+projects:[
+{title:"Lokma Haniya Sitesi",imgs:["Screenshot 2026-01-15 172627.png"]},
+{title:"Beauty Clinic Sitesi",imgs:["Screenshot 2026-01-15 173624.png"]}
+],
+skillsTitle:"Beceriler",
+skills:["HTML","CSS","Java","React.js"],
+langsTitle:"Diller",
+langs:["Arapça","İngilizce","Türkçe"]
+}
+};
+
+function setLang(l){
+const d=data[l];
+name.innerText=d.name;
+title.innerText=d.title;
+location.innerText=d.location;
+aboutTitle.innerText=d.aboutTitle;
+aboutText.innerText=d.aboutText;
+projectsTitle.innerText=d.projectsTitle;
+
+projects.innerHTML=d.projects.map(p=>`
+<div class="project-card">
+  <img src="${p.imgs[0]}">
+  <div class="content"><strong>${p.title}</strong></div>
+</div>`).join("");
+
+skillsTitle.innerText=d.skillsTitle;
+skills.innerHTML=d.skills.map(s=>`<span>${s}</span>`).join("");
+
+langsTitle.innerText=d.langsTitle;
+langs.innerHTML=d.langs.map(l=>`<li>${l}</li>`).join("");
+}
+setLang("ar");
+</script>
+
+</body>
+</html>
